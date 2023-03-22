@@ -1,0 +1,1 @@
+# eagle-advanced-duplicate-manager
