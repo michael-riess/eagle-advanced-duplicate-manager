@@ -17,65 +17,55 @@
   </head>
   <body class="bg-teal-700">
     <div
-      class="max-w-xl m-auto h-screen flex flex-col align-center justify-center"
+      class="max-w-xl m-auto h-screen flex flex-col align-center justify-center initial-form"
     >
+
+    <form id="form">
       <div class="flex flex-col w-full items-center justify-center bg-grey-lighter">
         <label
+          id="lib-label"
           class="w-64 flex flex-col items-center px-4 py-7 bg-white text-gray-500 rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:text-teal-800"
         >
           <img src="./images/logo.svg" width="32" />
-          <span class="mt-2 leading-normal">Select an image to resize</span>
-          <input id="img" type="file" class="hidden" />
+          <span class="mt-2 leading-normal">Select an Eagle Library</span>
+          <input id="lib" type="file" class="hidden" />
         </label>
       </div>
 
-      <div class="flex flex-col w-full items-center justify-center bg-grey-lighter">
+      <div class="flex flex-col w-full items-center justify-center bg-grey-lighter mt-6">
         <label
+          id="dir-label"
           class="w-64 flex flex-col items-center px-4 py-7 bg-white text-gray-500 rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:text-teal-800"
         >
           <img src="./images/logo.svg" width="32" />
-          <span class="mt-2 leading-normal">Select an Eagle library</span>
-          <input id="dirs" type="file" class="hidden" />
+          <span class="mt-2 leading-normal">Select an Import Folder</span>
+          <input id="dir" type="file" class="hidden" />
         </label>
       </div>
-
-      <!-- Form -->
-      <form id="img-form" class="hidden">
-        <div class="mt-6">
-          <label class="mt-1 block text-white text-center w-80 m-auto py-3 shadow-sm border-gray-300 rounded-md">Width</label>
-          <input
-            type="number"
-            name="width"
-            id="width"
-            class="mt-1 block w-80 m-auto p-3 shadow-sm border-gray-300 rounded-md"
-            placeholder="Width"
-          />
-        </div>
-
-        <div class="mt-4">
-          <label class="mt-1 block text-white text-center w-80 m-auto py-3 shadow-sm border-gray-300 rounded-md">Height</label>
-          <input
-            type="number"
-            name="height"
-            id="height"
-            class="mt-1 block w-80 m-auto p-3 shadow-sm border-gray-300 rounded-md"
-            placeholder="Height"
-          />
-        </div>
 
         <!-- Button -->
         <div class="mt-6">
           <button
+            id="submit-button"
             type="submit"
-            class="w-80 m-auto flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-teal-500 hover:bg-teal-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+            class="hidden w-80 m-auto flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-teal-500 hover:bg-teal-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
           >
-            Resize
+            Import
           </button>
 
       </form>
 
-      <p class="text-white text-lg text-center font-mono mt-6"><strong>File: </strong><span id="filename"></span></p>
-      <p class="text-white text-lg text-center font-mono mt-2"><strong>Output: </strong><span id="output-path"></span></p>
+      <p class="text-white text-lg text-center font-mono mt-6"><strong>Library: </strong><span id="library-path"></span></p>
+      <p class="text-white text-lg text-center font-mono mt-2"><strong>Import: </strong><span id="import-path"></span></p>
     </div>
+
+
+    <div class="flex flex-row w-full justify-center bg-grey-lighter hidden" id="compare-images">
+      <img id="image-1" class="hover:border-black border-2 border-indigo-600"/>
+      <img id="image-2" class="hover:border-black border-2 border-indigo-600"/>
+    </div>
+
+
+
   </body>
 </html>
