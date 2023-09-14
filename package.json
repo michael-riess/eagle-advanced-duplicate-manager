@@ -1,24 +1,37 @@
 {
-    "name": "eagle-advannced-duplicate-manager",
-    "version": "1.0.0",
-    "main": "index.js",
-    "repository": "https://github.com/michael-riess/eagle-advanced-duplicate-manager.git",
-    "author": "Michael Riess <michael.riess@mailfence.com>",
-    "license": "MIT",
-    "devDependencies": {
-        "electron": "^23.1.4",
-        "electronmon": "^2.0.2"
-    },
-    "dependencies": {
-        "electron-fetch": "^1.9.1",
-        "exiftool-vendored": "^21.2.0",
-        "glob": "^9.3.2",
-        "jimp": "^0.22.7",
-        "resize-img": "^2.0.0",
-        "rxjs": "^7.8.0",
-        "toastify-js": "^1.12.0"
-    },
-    "scripts": {
-        "start": "electron ."
-    }
+  "name": "eagle-advannced-duplicate-manager",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/michael-riess/eagle-advanced-duplicate-manager.git",
+  "author": "Michael Riess <michael.riess@mailfence.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.4.2",
+    "@electron-forge/maker-deb": "^6.4.2",
+    "@electron-forge/maker-rpm": "^6.4.2",
+    "@electron-forge/maker-squirrel": "^6.4.2",
+    "@electron-forge/maker-zip": "^6.4.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+    "@types/electron": "^1.6.10",
+    "electron": "^23.1.4",
+    "electronmon": "^2.0.2",
+    "tailwindcss": "^3.3.3"
+  },
+  "dependencies": {
+    "electron-fetch": "^1.9.1",
+    "electron-squirrel-startup": "^1.0.0",
+    "exiftool-vendored": "^21.2.0",
+    "glob": "^9.3.2",
+    "jimp": "^0.22.7",
+    "resize-img": "^2.0.0",
+    "rxjs": "^7.8.0",
+    "toastify-js": "^1.12.0",
+    "yarn": "^1.22.19"
+  },
+  "scripts": {
+    "start": "electron-forge start",
+    "start-r": "electronmon .",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  }
 }
